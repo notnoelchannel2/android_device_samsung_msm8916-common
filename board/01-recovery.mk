@@ -1,3 +1,4 @@
+TARGET_NO_RECOVERY := true
 # TWRP
 ifneq ($(wildcard bootable/recovery-twrp),)
 	RECOVERY_VARIANT := twrp
