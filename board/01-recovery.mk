@@ -18,26 +18,24 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 TARGET_RECOVERY_DENSITY 			:= hdpi
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 255
-TW_HAS_DOWNLOAD_MODE := true
-TW_HAS_MTP := true
-TW_INCLUDE_CRYPTO := true
-TW_INPUT_BLACKLIST := "accelerometer\x0ahbtp_vm"
-TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-TW_MTP_DEVICE := /dev/mtp_usb
-TW_NEW_ION_HEAP := true
-TW_NO_REBOOT_BOOTLOADER := true
-TW_NO_USB_STORAGE := true
-TW_TARGET_USES_QCOM_BSP := false
-TW_THEME := portrait_hdpi
-TW_INCLUDE_NTFS_3G := true
-
-# Oreo
-TW_NO_LEGACY_PROPS := true
 
 TARGET_RECOVERY_FSTAB := device/samsung/msm8916-common/recovery/recovery.fstab
 
 ifeq ($(RECOVERY_VARIANT),twrp)
 	BOARD_GLOBAL_CFLAGS += -DTW_USE_MINUI_CUSTOM_FONTS
+    TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+    TW_MAX_BRIGHTNESS := 255
+    TW_HAS_DOWNLOAD_MODE := true
+    TW_HAS_MTP := true
+    TW_INCLUDE_CRYPTO := true
+    TW_INPUT_BLACKLIST := "accelerometer\x0ahbtp_vm"
+    TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+    TW_MTP_DEVICE := /dev/mtp_usb
+    TW_NEW_ION_HEAP := true
+    TW_NO_REBOOT_BOOTLOADER := true
+    TW_NO_USB_STORAGE := true
+    TW_TARGET_USES_QCOM_BSP := false
+    TW_THEME := portrait_hdpi
+    TW_INCLUDE_NTFS_3G := true
+    TW_NO_LEGACY_PROPS := true
 endif
